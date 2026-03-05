@@ -1,0 +1,33 @@
+[project]
+name = "csv-script"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "ra",email = "kulttura.hardware@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "tabulate (>=0.9.0,<0.10.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "csv_script", from = "src"}]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]  # I = isort (сортировка импортов)
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.15.4,<0.16.0)"
+]
