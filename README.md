@@ -20,7 +20,7 @@ poetry install
 ## Использование
 
 ```bash
-python src/csv_script/main.py --files dataset1.csv dataset2.csv --report average-gdp
+poetry run python src/csv_script/main.py --files dataset1.csv dataset2.csv --report average-gdp
 ```
 
 ### Пример вывода
@@ -33,7 +33,7 @@ python src/csv_script/main.py --files dataset1.csv dataset2.csv --report average
 
 ```bash
 # Запуск тестов
-pytest
+poetry run pytest
 
 # Запуск тестов с покрытием кода
-pytest --cov=src/csv_script --cov-report=html
+poetry run pytest --cov=src/csv_script --cov-report=html
